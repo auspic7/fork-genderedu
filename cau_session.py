@@ -45,13 +45,7 @@ def get_login_session(username, password):
     for input in form.children:
         data[input['name']] = input['value']
     print(data)
-    cookies = {
-        'UAKEY': '77d4ac7158ff4a95b22837a186a0143e',
-        'NCAUPOLICYNUM': '244',
-        'AUTHCHK': 'F',
-        'NCAUAUTH': '84774f9b7fbf906fa8da92c917a0a6972460e8d65f3fc0f02b34c320f043d99396892375fdcd50421315185d808fea1b39d5ac03ddd1ba7e95114f02e068d87eb240646783db963bf2c1619c31e0e064fa554ecca03e0262fce702d8',
-        'NCAUAUTHad': '3091956662cc01c2946a9d320dcf6cde463d29f262c3986b9522fb0fd5e7e16fc829569dcc8bd8c8d3337f7e1703b867',
-    }
+
     headers = {
         'Connection': 'keep-alive',
         'Cache-Control': 'max-age=0',
@@ -69,7 +63,7 @@ def get_login_session(username, password):
         'Referer': 'https://sso2.cau.ac.kr/SSO/AuthWeb/Logon.aspx?ssosite=genderedu.cau.ac.kr',
         'Accept-Language': 'ko',
     }
-    s.post('https://sso2.cau.ac.kr/SSO/AuthWeb/LogonDomain.aspx', headers=headers, cookies=cookies, data=data)
+    s.post('https://sso2.cau.ac.kr/SSO/AuthWeb/LogonDomain.aspx', headers=headers, data=data)
 
     headers = {
         'Connection': 'keep-alive',
