@@ -1,7 +1,5 @@
 # F❌❌K GenderEdu
 
----
-
 Instantly complete useless CAU's gender education
 
 # Usage
